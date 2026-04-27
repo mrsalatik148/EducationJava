@@ -5,7 +5,10 @@ import java.io.File;
         mkDir();
     }
     void mkDir() {
-        File dir = new File("/Users/user/projects");
+        File dir = new File("/Users/user/projects/JavaDir");
+        dir.mkdir();
+        File file = new File(dir, "test.txt");
+        file.mkdir();
         if(dir.isDirectory()) {
             for(File item : dir.listFiles()) {
                 if(item.isDirectory()) {
