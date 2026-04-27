@@ -17,8 +17,13 @@ class TryCatch {
             errorMassage = e.getMessage();
         }
         finally {
-            IO.println("Finally");
-            IO.println(errorMassage);
+            IO.println("error: ");
+            if(errorMassage != null){
+                IO.println(errorMassage);
+            }
+            else {
+                IO.println("Exception not found!");
+            }
         }
     }
 }
